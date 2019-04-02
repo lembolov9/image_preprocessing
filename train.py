@@ -108,7 +108,7 @@ def main(task='all'):
 
     with tf.device('/cpu:0'):
         sess = tf.Session(config=tf.ConfigProto(allow_soft_placement=True))
-        with tf.device('/cpu:0'): #<- remove it if you train on CPU or other GPU
+        with tf.device('/gpu:0'): #<- remove it if you train on CPU or other GPU
             ###======================== DEFIINE MODEL =======================###
             ## nz is 4 as we input all Flair, T1, T1c and T2.
             t_image = tf.placeholder('float32', [batch_size, nw, nh, nz], name='input_image')
