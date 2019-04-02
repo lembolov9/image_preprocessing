@@ -1,0 +1,5 @@
+venv/
+TRAIN_SET/
+.idea/
+samples/
+checkpoints/
